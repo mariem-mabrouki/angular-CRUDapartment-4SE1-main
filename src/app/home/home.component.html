@@ -1,0 +1,16 @@
+<p>welcome 4SE3</p>
+<h2>Interpolation: {{VAR1}} </h2>
+<h1>Proptriety binding: <img style="width: 60px;" [src]="VAR2"></h1>
+<h1>Event Binding: <button (click)="Function1()">Click ME</button> </h1>
+<h1>Two way binding: <input [(ngModel)]="VAR3"> </h1>
+<h2>{{VAR3}}</h2>
+<h1 *ngIf="VAR3 ; else f1">
+  Bonsoir
+</h1>
+<ng-template #f1 >Bonjour
+</ng-template>
+
+
+<ul *ngFor="let element of list1, let i=index">
+  <li>{{i}}*{{element}}</li>
+</ul>

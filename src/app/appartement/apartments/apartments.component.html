@@ -1,0 +1,26 @@
+<h1 class="text-center my-4">List of Apartments</h1>
+<button class="btn btn-success mb-4" routerLink="/addApp">Add Apartment</button>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let apartment of listApartments">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Apartment {{ apartment.apartNum }}</h5>
+          
+          <p class="card-text"><strong>Surface:</strong> {{ apartment.surface }} m²</p>
+          <p class="card-text"><strong>Floor Number:</strong> {{ apartment.floorNum }}</p>
+          <p class="card-text"><strong>Terrace:</strong> {{ apartment.terrace }}</p>
+          <p class="card-text"><strong>Surface of Terrace:</strong> {{ apartment.surfaceterrace || 'N/A' }}</p>
+          <p class="card-text"><strong>Category:</strong> {{ apartment.category }}</p>
+          <!-- Appelle la méthode pour afficher le nom de la résidence -->
+          <p class="card-text"><strong>Residence:</strong> {{ getResidenceName(apartment.ResidenceId) }}</p>
+          
+          <!-- Edit and Delete buttons -->
+          <button class="btn btn-warning" (click)="editApartment(apartment.id)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteApartment(apartment.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

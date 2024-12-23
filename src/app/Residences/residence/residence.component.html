@@ -1,0 +1,25 @@
+<h1 class="text-center my-4">List of Residences</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let residence of listResidences">
+      <img [src]="residence.image" class="card-img-top img-fluid" alt="{{residence.name}} image"
+        style="height: 200px; object-fit: cover;">
+      <div class="card-body">
+        <h5 class="card-title">{{ residence.name }}</h5>
+        <p class="card-text"><small class="text-muted">Status: {{ residence.status }}</small></p>
+
+        <div> 
+          <button (click)="showLocation(residence)" class="btn btn-primary">Show Location</button>
+          <span *ngIf="visiblity && residence.name === vv"> {{ residence.address }}</span>
+        </div>
+
+        <div class="mt-2">
+          <button class="btn btn-danger" (click)="addFavoris(residence)">Like</button>
+          <button class="btn btn-success" [routerLink]="['/residence/details/', residence.id]">Show Details</button>
+          <button class="btn btn-warning" [routerLink]="['/residence/edit', residence.id]">Edit</button>
+          <button class="btn btn-danger" (click)="confirmDelete(residence.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

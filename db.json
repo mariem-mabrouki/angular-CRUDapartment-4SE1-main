@@ -1,0 +1,55 @@
+{
+  "residences": [
+    {
+      "id": "1",
+      "name": "El fel",
+      "address": "Borj Cedria",
+      "status": "Disponible"
+    },
+    {
+      "id": "2",
+      "name": "El yassmin",
+      "address": "Borj Cedria",
+      "status": "Vendu"
+    },
+    {
+      "id": "4",
+      "name": "aaaaaaaaaaaaaa",
+      "address": "bb",
+      "image": "bb",
+      "status": "Vendu"
+    }
+  ],
+  "apartments": [
+    {
+      "id": "fd13",
+      "apartNum": "3",
+      "floorNum": "3",
+      "surface": "3",
+      "terrace": "yes",
+      "surfaceTerrace": "",
+      "category": "S+3",
+      "residence": "2"
+    },
+    {
+      "id": "1e39",
+      "apartNum": "4",
+      "floorNum": "4",
+      "surface": "4",
+      "terrace": "no",
+      "surfaceTerrace": null,
+      "category": "S+2",
+      "residence": "4"
+    },
+    {
+      "id": "7d95",
+      "apartNum": "1",
+      "floorNum": "1",
+      "surface": "30",
+      "terrace": "no",
+      "surfaceTerrace": null,
+      "category": "S+2",
+      "residence": "1"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<div class="container">
+
+  <form [formGroup]="addResidenceForm" (ngSubmit)="SaveResidence()">
+    <div class="row mb-3">
+      <label for="name" class="col-sm-2 col-form-label">Name: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="name" id="name" formControlName="name" />
+        <div *ngIf="name?.touched && name?.invalid" class=" alert text-danger">
+          <div *ngIf="name?.errors?.['required']">
+            Required field
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="address" class="col-sm-2 col-form-label">Address: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="address" id="address" formControlName="address" />
+        <div *ngIf="address!.touched && address!.invalid" class="alert text-danger">
+          Required field
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="image" class="col-sm-2 col-form-label">Image: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="image" id="image" formControlName="image" />
+        <div *ngIf="image!.touched && image!.invalid" class="alert text-danger">
+          Required field
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="status" class="col-sm-2 col-form-label"> Status: </label>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="status" formControlName="status" id="status"
+            value="Disponible" />
+          <label class="form-check-label" for="status">
+            Disponible
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="status" formControlName="status" id="status"
+            value="En Construction" />
+          <label class="form-check-label" for="status">
+            En Construction
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="status" formControlName="status" id="status"
+            value="Vendu" />
+          <label class="form-check-label" for="status">
+            Vendu
+          </label>
+        </div>
+        <div *ngIf="status!.touched && status!.invalid" class="alert text-danger">
+          Required field
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Add</button>
+
+  </form>
+
+
+</div>
